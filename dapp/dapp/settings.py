@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-k$zfp67eq4=4b^!ovpd$4#z_!^2*n*=ih&g2q7vc4+#agq5jvk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',
+                 'justpythonindia.pythonanywhere.com']
 
 
 # Application definition
@@ -72,7 +73,8 @@ TEMPLATES = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # frontend
+    "https://www.justpython.in",  # frontend
+    "https://justpython.in",
 ]
 CORS_URLS_REGEX = r"^/api/.*$"
 
