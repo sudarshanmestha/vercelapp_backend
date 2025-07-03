@@ -73,8 +73,10 @@ TEMPLATES = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://www.justpython.in",  # frontend
-    "https://justpython.in",
+    
+    # "https://www.justpython.in",  # frontend
+    # "https://justpython.in",
+    "http://localhost:3000"
 ]
 CORS_URLS_REGEX = r"^/api/.*$"
 
