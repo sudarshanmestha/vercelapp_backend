@@ -1,0 +1,35 @@
+@base_url = http://127.0.0.1:8001
+
+### Get token
+# @name token
+POST {{base_url}}/api-token-auth/
+Content-Type: application/json
+
+{
+  "username": "justpython",
+  "password": "root"
+}
+
+### Use token in another request
+GET {{base_url}}/json/
+Content-Type: application/json
+Authorization: Token {{token.response.body.token}}
+
+###auth registration 
+POST {{base_url}}/dj-rest-auth/registration/
+Content-Type: application/json
+
+{
+  "email": "test@example.com",
+  "password1": "rootroot",
+  "password2": "rootroot"
+}
+
+###auth login 
+POST {{base_url}}/dj-rest-auth/login/
+Content-Type: application/json
+
+{
+  "username": "justpython3",
+  "password": "rootroot",
+}
