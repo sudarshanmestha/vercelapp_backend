@@ -29,7 +29,7 @@ urlpatterns = [
     path('api-token-auth/', views.obtain_auth_token),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
-    path('', include('core.urls', namespace="core")),
+    # path('', include('core.urls', namespace="core")),
     path('', include(router.urls)),
 ]
 
