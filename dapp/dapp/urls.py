@@ -25,7 +25,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    #my app
     path('api/', include('post_app.urls', namespace="post_app")),
+    path('DocPost/', include('DocPost.urls', namespace="DocPosts")),
+    #rest
     path('api-token-auth/', views.obtain_auth_token),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
     path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
